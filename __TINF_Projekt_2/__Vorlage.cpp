@@ -28,6 +28,7 @@
 //
 //// === MAKROS ===
 //#define xHoch2(x) (x)*(x) // BESSERES Makros !!!
+//#define COUT(x) cout << x << endl	// 'cout' verkürzen => LOG (X);
 //#define ANZ 45 
 //
 //// === PROTOTYPEN ===
