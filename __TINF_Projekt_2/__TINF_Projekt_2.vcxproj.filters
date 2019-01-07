@@ -45,10 +45,10 @@
     <ClCompile Include="Fahrzeug.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="18_12_14__Relationen__Vererbung.cpp">
+    <ClCompile Include="KopierKarte.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="KopierKarte.cpp">
+    <ClCompile Include="18_01_07__Vererbung_KA_Uebung.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
