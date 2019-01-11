@@ -48,7 +48,7 @@
     <ClCompile Include="KopierKarte.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="18_01_07__Vererbung_KA_Uebung.cpp">
+    <ClCompile Include="19_01_07__Vererbung_KA_Uebung.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

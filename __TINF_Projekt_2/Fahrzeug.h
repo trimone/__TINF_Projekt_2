@@ -15,9 +15,9 @@ protected:	// abgeleitete Klassen haben Zugriff
 
 public:
 	Fahrzeug(double vMax);
-	~Fahrzeug();
+	virtual ~Fahrzeug();
 
-	void fahren();
+	virtual void fahren();
 	bool setV(double v);
 	double getV();
 	
@@ -30,22 +30,24 @@ public:
 class Auto : public Fahrzeug
 {
 public:
-	Auto(int f);
-	~Auto();
+	Auto(double v);
+	virtual ~Auto();
 
 	void autoFahren();
+	virtual void fahren();
 };
 
 class Schiff : public Fahrzeug
 {
 private:
-	double brt;
+	double brt;	
 
 public:
 	Schiff(double vMax, double brt);
-	~Schiff();
+	virtual ~Schiff();
 
 	void schwimmen();
+	virtual void fahren();
 };
 
 
@@ -57,6 +59,7 @@ private:
 
 public:
 	U_Boot(double vMax, double brt, double vMaxG);
+	~U_Boot();
 	void tauchen();
 	void auftauchen();
 	void setV(double v);

@@ -6,39 +6,52 @@ using namespace std;
 
 #include "Fahrzeug.h"
 
-int Fahrzeug::anzahl = 0;
+#define LOG(x) cout << x << endl;
+
+
+int Fahrzeug::anzahl = 0;	// Speicherbeschaffung für 'static'-Variable
+
+double Fahrzeug::getAnzahl()
+{
+	return anzahl;		// hier dürfen nur 'static'-Variablen verwenden
+}
+
 
 Fahrzeug::Fahrzeug(double vMax)
 {
 	anzahl++;
-	cout << endl << "Fahzeug erzeugt";
+	LOG("Fahzeug erzeugt");
 
 	this->v = 0;
 	this->vMax = vMax;
-
-
 }
 
 
 Fahrzeug::~Fahrzeug()
 {
 	anzahl--;
-	cout << endl << "Fahzeug zerstört";
+	LOG("Fahzeug zerstört");
 }
 
 void Fahrzeug::fahren()
 {
-	cout << endl << "Fahzeug faehrt mit Geschwindigkeit v = " << this->v;
+	cout << endl << "Fahzeug faehrt mit Geschwindigkeit v = " << getV();
 }
 
 bool Fahrzeug::setV(double v)
 {
-	if (v <= this->vMax)
+	bool ok = false;
+
+	if (v >= 0)
 	{
-		this->v = v;		
+		if (v <= this->vMax)
+		{
+			this->v = v;
+		}
+		else
+			this->v = vMax;
+		ok = true;
 	}
-	else
-		this->v = vMax;
 
 	return true;
 }
@@ -48,15 +61,11 @@ double Fahrzeug::getV()
 	return this->v;
 }
 
-double Fahrzeug::getAnzahl()
-{
-	return anzahl;
-}
 
 // === METHODEN FÜR ABGELEITET KLASSEN ===
 
 // --- Auto --
-Auto::Auto(int f): Fahrzeug(f)	// Konstruktoraufruf der Basisklasse
+Auto::Auto(double v) : Fahrzeug(v)	// Konstruktoraufruf der Basisklasse
 {
 	cout << endl << "Auto erzeugt";
 }
@@ -71,6 +80,11 @@ void Auto::autoFahren()
 	cout << endl << "Auto faehrt mit Geschwindigkeit v = " << getV();
 }
 
+void Auto::fahren()
+{
+	LOG("Auto faehrt!");
+}
+
 // --- Schiff ---
 //Schiff::Schiff(int f):Fahrzeug(f)
 //{
@@ -79,12 +93,19 @@ void Auto::autoFahren()
 
 Schiff::Schiff(double vMax, double brt):Fahrzeug(vMax)
 {
-	this->brt = brt;
+	if (brt > 0)
+	{
+		this->brt = brt;
+	}
+	else 
+		this->brt = 1000;
+
+	LOG("Schiff erzeugt");
 }
 
 Schiff::~Schiff()
 {
-	cout << endl << "Schiff zerstoert";
+	LOG("Schiff zerstoert");
 }
 
 
@@ -94,12 +115,22 @@ void Schiff::schwimmen()
 
 }
 
+void Schiff::fahren()
+{
+	LOG(" Schiff schwimmt");
+}
+
 U_Boot::U_Boot(double vMax, double brt, double vMaxG):Schiff(vMax,brt)
 {
 	this->vMaxG = vMaxG;
 	getaucht = false;
+	LOG("UBoot erzeugt");
 }
 
+U_Boot::~U_Boot()
+{
+	LOG("UBoot zerstoert");
+}
 void U_Boot::tauchen()
 {
 	cout << endl << "U-Boot getauscht";
@@ -107,7 +138,6 @@ void U_Boot::tauchen()
 
 	
 	this->setV(vMaxG);
-
 }
 
 void U_Boot::auftauchen()
