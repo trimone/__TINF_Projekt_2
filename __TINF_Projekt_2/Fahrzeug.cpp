@@ -6,7 +6,7 @@ using namespace std;
 
 #include "Fahrzeug.h"
 
-#define LOG(x) cout << x << endl;
+#define COUT(x) cout << x << endl;
 
 
 int Fahrzeug::anzahl = 0;	// Speicherbeschaffung für 'static'-Variable
@@ -17,26 +17,41 @@ double Fahrzeug::getAnzahl()
 }
 
 
+//void Fahrzeug::fahren()
+//{
+//	COUT("Fahrzeug faehrt!");
+//}
+
 Fahrzeug::Fahrzeug(double vMax)
 {
 	anzahl++;
-	LOG("Fahzeug erzeugt");
+	COUT("Fahzeug erzeugt");
 
 	this->v = 0;
 	this->vMax = vMax;
+}
+
+Fahrzeug::Fahrzeug()
+{
+	COUT("Fahrzeug erzeugt");
+
+	this->v = 0;
+	this->vMax = 100;
+	anzahl++;
 }
 
 
 Fahrzeug::~Fahrzeug()
 {
 	anzahl--;
-	LOG("Fahzeug zerstört");
+	COUT("Fahzeug zerstört");
 }
 
-void Fahrzeug::fahren()
-{
-	cout << endl << "Fahzeug faehrt mit Geschwindigkeit v = " << getV();
-}
+// Definition nicht mehr notwendig, da rein virtuell bzw wird nie aufgerufen
+//void Fahrzeug::fahren()
+//{
+//	cout << endl << "Fahzeug faehrt mit Geschwindigkeit v = " << getV();
+//}
 
 bool Fahrzeug::setV(double v)
 {
@@ -82,7 +97,7 @@ void Auto::autoFahren()
 
 void Auto::fahren()
 {
-	LOG("Auto faehrt!");
+	COUT("Auto faehrt!");
 }
 
 // --- Schiff ---
@@ -100,36 +115,42 @@ Schiff::Schiff(double vMax, double brt):Fahrzeug(vMax)
 	else 
 		this->brt = 1000;
 
-	LOG("Schiff erzeugt");
+	COUT("Schiff erzeugt");
+}
+
+Schiff::Schiff()
+{
+	this->v = 2;
+	COUT("Schiff erzeugt");
 }
 
 Schiff::~Schiff()
 {
-	LOG("Schiff zerstoert");
+	COUT("Schiff zerstoert");
 }
 
 
 void Schiff::schwimmen()
 {
 	cout << endl << "Schiff schwimmt mit Geschwindigkeit v = " << getV();
-
 }
 
 void Schiff::fahren()
 {
-	LOG(" Schiff schwimmt");
+	COUT(" Schiff schwimmt mit v = " << getV());
+
 }
 
 U_Boot::U_Boot(double vMax, double brt, double vMaxG):Schiff(vMax,brt)
 {
 	this->vMaxG = vMaxG;
 	getaucht = false;
-	LOG("UBoot erzeugt");
+	COUT("UBoot erzeugt");
 }
 
 U_Boot::~U_Boot()
 {
-	LOG("UBoot zerstoert");
+	COUT("UBoot zerstoert");
 }
 void U_Boot::tauchen()
 {
@@ -159,4 +180,44 @@ void U_Boot::setV(double v)
 
 	}
 	else Fahrzeug::setV(v);
+}
+
+FlugBoot::FlugBoot()
+{
+	COUT("FlugBoot erzeugt");
+}
+Flugzeug::Flugzeug():Fahrzeug (0)
+{
+	COUT("Flugzeug erzeugt!");
+}
+
+Flugzeug::~Flugzeug()
+{
+	COUT("Flugzeug zerstoert");
+}
+
+void Flugzeug::fliegen()
+{
+	COUT("Fahrzeug fliegt");
+}
+
+
+
+
+double FlugBoot::getV()
+{
+	// return v; // geht nicht, mehrdeutiges Attribut (FlugBoot::v)
+					// Es werden zwei Basisklassen erzeugt => 2 mal Fahrzeug
+	return Fahrzeug::getV();
+	
+}
+
+void FlugBoot::fahren()
+{
+	COUT("FlugBoot faehrt, v = " << getV());
+}
+
+ FlugBoot::~FlugBoot()
+{
+	COUT("FlugBoot zerstoert");
 }

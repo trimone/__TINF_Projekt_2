@@ -21,9 +21,6 @@
     <ClCompile Include="Datum.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Kreis.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Rechteck.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -48,15 +45,15 @@
     <ClCompile Include="KopierKarte.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="19_01_07__Vererbung_KA_Uebung.cpp">
+    <ClCompile Include="GeoObjekt.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="19_01_21__Mehrfachvererbung.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datum.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Kreis.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Rechteck.h">
@@ -78,6 +75,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="KopierKarte.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoObjekt.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

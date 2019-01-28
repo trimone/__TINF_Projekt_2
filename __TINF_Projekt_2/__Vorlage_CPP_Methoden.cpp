@@ -11,6 +11,10 @@
 //#include "Class.h"	// Header-Datei der Klasse einfügen
 //
 //
+//#define TAB	cout << "\t"
+//#define COUT(x) cout << x << endl
+//
+//
 //// === DEFIDITION DER METHODEN ===
 //// Zwegs der übersichtilichkeit werden die Methoden ausgelagert
 //// 'Class::' ==> Methode gehört zu Klasse

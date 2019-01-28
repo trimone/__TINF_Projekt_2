@@ -1,7 +1,7 @@
 /*======================================================================================================
-TINF
+TINF				
 
-NAME: ALEX HUBER	KLASSE: FTED2	DATUM: 7.01.2019
+NAME: ALEX HUBER	KLASSE: FTED2	DATUM:	
 
 PROJEKT:	
 
@@ -25,15 +25,13 @@ using namespace std;			// damit string als Datentyp erkannt wird
 
 
 #include "my_biblio.h"			// Eigene Bibliothek
-
 #include "Fahrzeug.h"
-//#include "KopierKarte.h"
 
 // === MAKROS ===
 #define xHoch2(x) (x)*(x) // BESSERES Makros !!!
-#define ANZ 3
-
-#define LOG(x) cout << x << endl;
+#define TAB	cout << "\t"
+#define COUT(x) cout << x << endl	// 'cout' verkürzen => LOG (X);
+#define ANZ 45 
 
 // === PROTOTYPEN ===
 void fibonacci(int fib_vektor[]);
@@ -41,96 +39,33 @@ void fib_ausgeben(int fib_vektor[], int laenge);
 
 
 // === HAUPTPROGRAMM ===
-void main(void)
+void main(void)  
 {
 	// --- Lokale Variablen ---
-	struct Datum		// neuen Datentyp anlegen
-	{
-		int tag;		// 
-		int monat;
-		int jahr;
-	};				// ';' sehr wichtig !!!
-
-
-	int nrP, eingabe;
-
+		
 	// --- Programm Einleitung ---
 	cout << endl << "======================================================================" << endl;
 	cout << endl << " C++ Programmierung" << endl;
 	cout << endl << "======================================================================" << endl;
 	// 'endl' = 'end line' = '\n'
+	FlugBoot* mfb = new FlugBoot;
+	FlugBoot* antonov = new FlugBoot;
 
-	//Auto* auto1 = new Auto(10);
-	//ChipKarte* karte1 = new ChipKarte;
-	// ChipKarte karte2 // automatische erzeugung, BESSER!!
+	COUT("Anzahl Fahrzeuge: " << Fahrzeug::getAnzahl());
 
-	U_Boot* U_Obj[ANZ];
-
-	for (int i = 0; i < ANZ; i++)
-	{
-		U_Obj[i] = new U_Boot(6, 1830, 2);
-	}
-	LOG("Anzahl an UBooten: " << U_Boot::getAnzahl());
-	// oder : LOG("Anzahl an UBooten: " << Fahrzeug::getAnzahl());
-/*
-	LOG("Geschwindigkeit auf 7 setzten & schwimmen lassen");
-	cout << "\t";
-	U_Obj[0]->setV(7);
-	U_Obj[0]->schwimmen();
+	antonov->setV(23);
+	antonov->fahren();
 
 	_getch();
-
-	LOG("UBoot soll schwimmen");
-	U_Obj[0]->tauchen();
-	U_Obj[0]->schwimmen();
-
-	_getch();
-
-	LOG("Geschwindigkeit auf 3 setzten & schwimmen lassen");
-	U_Obj[0]->setV(3);
-	U_Obj[0]->schwimmen();
-
-	_getch();
-
-	LOG("Geschwindigkeit auf 1.5 setzten & schwimmen lassen\t");
-	U_Obj[0]->setV(1.5);
-	U_Obj[0]->schwimmen();
-
-	_getch();*/
-
-	for (int i = 0; i < ANZ; i++)
-	{
-		delete U_Obj[i];
-		U_Obj[i] = nullptr;
-		LOG("Anzahl an UBooten: " << U_Boot::getAnzahl());
-	}
-
-
-	// === VIRTUELLE METHODEN ===
-
-	Fahrzeug* f[2];
-
-	f[0] = new Auto(3);
-	f[1] = new Schiff(5, 278);
-
-	for (int i = 0; i < 2; i++)
-	{
-		f[i]->fahren();
-	}
-
-	for (int i = 0; i < 2; i++)
-	{
-		delete f[i];
-		f[i] = nullptr;
-	}
-
+	delete mfb;
+	mfb = nullptr;
+	delete antonov;
+	antonov = nullptr;
 	do
 	{
 		// === AUFGABE 1 ===
 
-		//cout << endl << "? " << endl;
-
-
+		cout << endl << " " << endl;
 
 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -115,13 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="19_01_07__Vererbung_KA_Uebung.cpp" />
+    <ClCompile Include="19_01_21__Mehrfachvererbung.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
+    <ClCompile Include="GeoObjekt.cpp" />
     <ClCompile Include="HausTier.cpp" />
     <ClCompile Include="Hund.cpp" />
     <ClCompile Include="KopierKarte.cpp" />
-    <ClCompile Include="Kreis.cpp" />
     <ClCompile Include="my_biblio.cpp" />
     <ClCompile Include="Rechteck.cpp" />
     <ClCompile Include="Widerstand.cpp" />
@@ -131,10 +131,10 @@
   <ItemGroup>
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Fahrzeug.h" />
+    <ClInclude Include="GeoObjekt.h" />
     <ClInclude Include="HausTier.h" />
     <ClInclude Include="Hund.h" />
     <ClInclude Include="KopierKarte.h" />
-    <ClInclude Include="Kreis.h" />
     <ClInclude Include="Rechteck.h" />
     <ClInclude Include="Widerstand.h" />
     <ClInclude Include="__Vorlage_Header.h" />
