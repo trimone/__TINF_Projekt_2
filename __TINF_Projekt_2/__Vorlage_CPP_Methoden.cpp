@@ -6,7 +6,9 @@
 //
 //// === INCLUDE ===
 //
-//
+//#include <iostream>
+//#include <string>
+//using namespace std;
 //
 //#include "Class.h"	// Header-Datei der Klasse einfügen
 //

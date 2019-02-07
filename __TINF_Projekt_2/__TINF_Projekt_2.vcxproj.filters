@@ -48,7 +48,13 @@
     <ClCompile Include="GeoObjekt.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="19_01_21__Mehrfachvererbung.cpp">
+    <ClCompile Include="19_01_28__Aggregation_Komposition.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto_Agg.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Rahmen.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -78,6 +84,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="GeoObjekt.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Auto_Agg.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Rahmen.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

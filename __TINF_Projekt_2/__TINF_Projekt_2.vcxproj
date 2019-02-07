@@ -115,7 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="19_01_21__Mehrfachvererbung.cpp" />
+    <ClCompile Include="19_01_28__Aggregation_Komposition.cpp" />
+    <ClCompile Include="Auto_Agg.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
     <ClCompile Include="GeoObjekt.cpp" />
@@ -124,11 +125,13 @@
     <ClCompile Include="KopierKarte.cpp" />
     <ClCompile Include="my_biblio.cpp" />
     <ClCompile Include="Rechteck.cpp" />
+    <ClCompile Include="Rahmen.cpp" />
     <ClCompile Include="Widerstand.cpp" />
     <ClCompile Include="__Vorlage.cpp" />
     <ClCompile Include="__Vorlage_CPP_Methoden.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Auto_Agg.h" />
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Fahrzeug.h" />
     <ClInclude Include="GeoObjekt.h" />
@@ -136,6 +139,7 @@
     <ClInclude Include="Hund.h" />
     <ClInclude Include="KopierKarte.h" />
     <ClInclude Include="Rechteck.h" />
+    <ClInclude Include="Rahmen.h" />
     <ClInclude Include="Widerstand.h" />
     <ClInclude Include="__Vorlage_Header.h" />
   </ItemGroup>
