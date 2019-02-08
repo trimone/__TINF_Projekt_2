@@ -116,10 +116,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="19_01_28__Aggregation_Komposition.cpp" />
+    <ClCompile Include="19_02_08__Komposition_Rahmen.cpp" />
     <ClCompile Include="Auto_Agg.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
-    <ClCompile Include="GeoObjekt.cpp" />
     <ClCompile Include="HausTier.cpp" />
     <ClCompile Include="Hund.cpp" />
     <ClCompile Include="KopierKarte.cpp" />
@@ -134,7 +134,6 @@
     <ClInclude Include="Auto_Agg.h" />
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Fahrzeug.h" />
-    <ClInclude Include="GeoObjekt.h" />
     <ClInclude Include="HausTier.h" />
     <ClInclude Include="Hund.h" />
     <ClInclude Include="KopierKarte.h" />

@@ -50,8 +50,8 @@ void Rechteck::setAbmessungen(double l, double b)
 	{
 		laenge = l;
 		breite = b;
-		COUT("Abmesungen von Rechteg gesetzt:"); TAB;
-		COUT("Laenge = " << laenge << "Breite = " << breite);
+		COUT("Abmesungen von Rechteck gesetzt:"); TAB;
+		COUT("Laenge = " << laenge << " | Breite = " << breite);
 	}
 	else COUT("Werte ungueltig!!");
 }
@@ -102,7 +102,7 @@ Rahmen::Rahmen(double li, double bi, double la, double ba)
 {
 	innen.setAbmessungen(li, bi);
 	aussen.setAbmessungen(la, ba);
-	COUT("Rahmen erstellt")
+	COUT("Rahmen erstellt");
 }
 
 Rahmen::~Rahmen()

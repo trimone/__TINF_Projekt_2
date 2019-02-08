@@ -55,12 +55,36 @@ void main(void)
 	cout << endl << "======================================================================" << endl;
 	// 'endl' = 'end line' = '\n'
 
-	Auto_Agg* brumbrum = new Auto_Agg(23);
-	brumbrum->anmelden();
-	_getch();
+	Motor* motor = new Motor(123);
 
+	Auto_Agg* brumbrum = new Auto_Agg(23);
+	Auto_Agg* brumbrum_mit_motor = new Auto_Agg(motor, 42);
+	Auto_Agg* mercedes = new Auto_Agg(motor, 723);	// Motor ist 2 Fahrzeugen !!!!!
+													// NICHT  ERLAUBT !!!!
+	brumbrum->anmelden();
+	brumbrum_mit_motor->anmelden();
+	
+	_getch();
+	brumbrum->anmelden();	// doppeltes anmelben nicht möglich
+	COUT("__________________________");
+	brumbrum_mit_motor->motorAusbauen();
+
+	mercedes->motorEinbauen(motor);
+
+	COUT("__________________________");
 	delete brumbrum;
 	brumbrum = nullptr;
+
+	delete brumbrum_mit_motor;
+	brumbrum_mit_motor = nullptr;
+
+	delete mercedes;
+	mercedes = nullptr;
+
+	_getch();
+	COUT("__________________________");
+	delete motor;
+	motor = nullptr;
 
 	do
 	{
