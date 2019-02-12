@@ -117,11 +117,13 @@
   <ItemGroup>
     <ClCompile Include="19_01_28__Aggregation_Komposition.cpp" />
     <ClCompile Include="19_02_08__Komposition_Rahmen.cpp" />
+    <ClCompile Include="19_02_12__KA_Uebung_Supermarkt.cpp" />
     <ClCompile Include="Auto_Agg.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
     <ClCompile Include="HausTier.cpp" />
     <ClCompile Include="Hund.cpp" />
+    <ClCompile Include="Kasse.cpp" />
     <ClCompile Include="KopierKarte.cpp" />
     <ClCompile Include="my_biblio.cpp" />
     <ClCompile Include="Rechteck.cpp" />
@@ -136,6 +138,7 @@
     <ClInclude Include="Fahrzeug.h" />
     <ClInclude Include="HausTier.h" />
     <ClInclude Include="Hund.h" />
+    <ClInclude Include="Kasse.h" />
     <ClInclude Include="KopierKarte.h" />
     <ClInclude Include="Rechteck.h" />
     <ClInclude Include="Rahmen.h" />

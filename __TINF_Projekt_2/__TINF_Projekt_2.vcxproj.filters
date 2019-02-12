@@ -57,6 +57,12 @@
     <ClCompile Include="19_01_28__Aggregation_Komposition.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="19_02_12__KA_Uebung_Supermarkt.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Kasse.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datum.h">
@@ -87,6 +93,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Rahmen.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Kasse.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
