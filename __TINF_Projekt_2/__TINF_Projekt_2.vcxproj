@@ -115,6 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="18_09_10__Sortier_Algorithmus.cpp" />
+    <ClCompile Include="18_09_21__Strukturen.cpp" />
+    <ClCompile Include="18_09_24__Strukturen_Aufgabe.cpp" />
+    <ClCompile Include="18_10_01__Marathonlauf_(Strukturen).cpp" />
     <ClCompile Include="19_01_28__Aggregation_Komposition.cpp" />
     <ClCompile Include="19_02_08__Komposition_Rahmen.cpp" />
     <ClCompile Include="19_02_12__KA_Uebung_Supermarkt.cpp" />
@@ -128,7 +132,9 @@
     <ClCompile Include="my_biblio.cpp" />
     <ClCompile Include="Rechteck.cpp" />
     <ClCompile Include="Rahmen.cpp" />
+    <ClCompile Include="Structs.cpp" />
     <ClCompile Include="Widerstand.cpp" />
+    <ClCompile Include="__MAIN( ).cpp" />
     <ClCompile Include="__Vorlage.cpp" />
     <ClCompile Include="__Vorlage_CPP_Methoden.cpp" />
   </ItemGroup>
@@ -142,7 +148,10 @@
     <ClInclude Include="KopierKarte.h" />
     <ClInclude Include="Rechteck.h" />
     <ClInclude Include="Rahmen.h" />
+    <ClInclude Include="Structs.h" />
     <ClInclude Include="Widerstand.h" />
+    <ClInclude Include="Menu_Class.h" />
+    <ClInclude Include="__all_mains.h" />
     <ClInclude Include="__Vorlage_Header.h" />
   </ItemGroup>
   <ItemGroup>

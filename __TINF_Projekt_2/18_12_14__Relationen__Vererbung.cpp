@@ -42,14 +42,7 @@ void fib_ausgeben(int fib_vektor[], int laenge);
 void main(void)  
 {
 	// --- Lokale Variablen ---
-	struct Datum		// neuen Datentyp anlegen
-	{
-		int tag;		// 
-		int monat;
-		int jahr;
-	};				// ';' sehr wichtig !!!
 	
-
 	int nrP, eingabe;
 
 	// --- Programm Einleitung ---

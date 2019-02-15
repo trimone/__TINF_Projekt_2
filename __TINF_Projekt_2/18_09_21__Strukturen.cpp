@@ -1,3 +1,4 @@
+#pragma once
 /*======================================================================================================
 TINF
 
@@ -6,7 +7,6 @@ NAME: ALEX HUBER	KLASSE: FTE1	DATUM:
 PROJEKT:
 
 ======================================================================================================*/
-
 
 #include <stdio.h>
 #include <conio.h>
@@ -20,30 +20,31 @@ PROJEKT:
 
 
 #include "my_biblio.h"			// Eigene Bibliothek
+#include "Structs.h"
 
 // === MAKROS ===
 #define xHoch2(x) (x)*(x) // BESSERES Makros !!!
 #define ANZ 45 
 
-// === Strukturen anlegen (global) ===
-struct Datum		// neuen Datentyp anlegen, noch keine Variable
-{
-	int tag;		// Ausbau des Datentyps
-	int monat;
-	int jahr;
-};				// ';' sehr wichtig !!!
-typedef struct Datum Datum;	// Vorhandener Datentyp wird ersetzt // ABKÜRZUNG !!
-							// Man muss nicht immer 'struct Datum' schreiben, 'Datum' reicht
-
-
-// === PROTOTYPEN ===
-void ausgeben(Datum dat);
-void ausgeben_zg(Datum* dat);
-Datum eingeben(void);
-void eingeben_zg(Datum* dat);
+//// === Strukturen anlegen (global) ===
+//struct Datum		// neuen Datentyp anlegen, noch keine Variable
+//{
+//	int tag;		// Ausbau des Datentyps
+//	int monat;
+//	int jahr;
+//};				// ';' sehr wichtig !!!
+//typedef struct Datum Datum;	// Vorhandener Datentyp wird ersetzt // ABKÜRZUNG !!
+//							// Man muss nicht immer 'struct Datum' schreiben, 'Datum' reicht
+//
+//
+//// === PROTOTYPEN ===
+//void ausgeben(Datum dat);
+//void ausgeben_zg(Datum* dat);
+//Datum eingeben(void);
+//void eingeben_zg(Datum* dat);
 
 // === HAUPTPROGRAMM ===
-void main(void)
+void _18_09_21__Strukturen(void)
 {
 	// --- Lokale Variablen ---
 	
@@ -88,35 +89,35 @@ void main(void)
 }
 
 // === FUNKTIONEN ===
-
-void ausgeben(Datum dat)
-{
-	printf("\n %i.%i.%i\n", dat.tag, dat.monat, dat.jahr);	
-}
-
-void ausgeben_zg(Datum* dat)
-{
-	printf("\n %i.%i.%i\n", dat->tag, dat->monat, dat->jahr);
-}
-
-Datum eingeben(void)
-{
-	Datum dat;
-	printf("\n Datum eingeben (DD.MM.JJJJ):");
-	scanf_s("%d.%d.%d", &dat.tag, &dat.monat, &dat.jahr);	// DD.MM.JJJJ wird vorgegeben
-						// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
-										
-
-	return dat;
-}
-
-// mit Zeiger
-void eingeben_zg(Datum* dat)
-{
-	printf("\n Datum eingeben (DD.MM.JJJJ):");
-	scanf_s("%d.%d.%d", &dat->tag, &dat->monat, &dat->jahr);	// DD.MM.JJJJ wird vorgegeben
-					// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
-
-	//return (dat);
-}
-
+//
+//void ausgeben(Datum dat)
+//{
+//	printf("\n %i.%i.%i\n", dat.tag, dat.monat, dat.jahr);	
+//}
+//
+//void ausgeben_zg(Datum* dat)
+//{
+//	printf("\n %i.%i.%i\n", dat->tag, dat->monat, dat->jahr);
+//}
+//
+//Datum eingeben(void)
+//{
+//	Datum dat;
+//	printf("\n Datum eingeben (DD.MM.JJJJ):");
+//	scanf_s("%d.%d.%d", &dat.tag, &dat.monat, &dat.jahr);	// DD.MM.JJJJ wird vorgegeben
+//						// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
+//										
+//
+//	return dat;
+//}
+//
+//// mit Zeiger
+//void eingeben_zg(Datum* dat)
+//{
+//	printf("\n Datum eingeben (DD.MM.JJJJ):");
+//	scanf_s("%d.%d.%d", &dat->tag, &dat->monat, &dat->jahr);	// DD.MM.JJJJ wird vorgegeben
+//					// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
+//
+//	//return (dat);
+//}
+//

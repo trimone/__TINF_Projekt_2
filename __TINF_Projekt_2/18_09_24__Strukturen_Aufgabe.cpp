@@ -1,3 +1,4 @@
+#pragma once
 /*======================================================================================================
 TINF
 
@@ -6,7 +7,6 @@ NAME: ALEX HUBER	KLASSE: FTE1	DATUM:
 PROJEKT:
 
 ======================================================================================================*/
-
 
 #include <stdio.h>
 #include <conio.h>
@@ -18,7 +18,7 @@ PROJEKT:
 #include <ctype.h>
 #include <windows.h>			// Sleep
 
-
+#include "Structs.h"
 #include "my_biblio.h"			// Eigene Bibliothek
 
 // === MAKROS ===
@@ -26,36 +26,36 @@ PROJEKT:
 #define ANZ 100
 
 // === Strukturen anlegen (global) ===
-struct Datum		// neuen Datentyp anlegen, noch keine Variable
-{
-	int tag;		// Ausbau des Datentyps
-	int monat;
-	int jahr;
-};				// ';' sehr wichtig !!!
-typedef struct Datum Datum;	// Vorhandener Datentyp wird ersetzt // ABKÜRZUNG !!
-							// Man muss nicht immer 'struct Datum' schreiben, 'Datum' reicht
-
+//struct Datum		// neuen Datentyp anlegen, noch keine Variable
+//{
+//	int tag;		// Ausbau des Datentyps
+//	int monat;
+//	int jahr;
+//};				// ';' sehr wichtig !!!
+//typedef struct Datum Datum;	// Vorhandener Datentyp wird ersetzt // ABKÜRZUNG !!
+//							// Man muss nicht immer 'struct Datum' schreiben, 'Datum' reicht
+//
 struct Person
 {
 	char vorname[50];
 	char nachname[50];
 	Datum gebTag;
 }; typedef struct Person Person;
-
-// === PROTOTYPEN ===
-void ausgeben(Datum dat);
-void ausgeben_zg(Datum* dat);
-Datum eingeben(void);
-void eingeben_zg(Datum* dat);
+//
+//// === PROTOTYPEN ===
+//void ausgeben(Datum dat);
+//void ausgeben_zg(Datum* dat);
+//Datum eingeben(void);
+//void eingeben_zg(Datum* dat);
 void per_einlesen(Person* per);
 void per_ausgeben(Person* per);
 
 int per_suchen(char nachname[], int anzahl, Person per_vek[]);
-int menue();
+int menus();
 
 
 // === HAUPTPROGRAMM ===
-void main(void)
+void _18_09_24__Strukturen_Aufgabe(void)
 {
 	// --- Lokale Variablen ---
 	int eingabe, i, nr;
@@ -94,7 +94,7 @@ void main(void)
 	printf("\n======================================================================\n");
 	do
 	{
-		eingabe = menue();
+		eingabe = menus();
 
 		switch (eingabe)
 		{
@@ -161,7 +161,7 @@ int per_suchen(char nachname[], int anzahl, Person per_vek[])
 	return nr;
 }
 
-int menue()
+int menus()
 {
 	int eingabe=0;
 	printf("\n [1] Person eingeben");
@@ -174,37 +174,37 @@ int menue()
 	
 	return eingabe;
 }
-
-void ausgeben(Datum dat)
-{
-	printf("\n %i.%i.%i\n", dat.tag, dat.monat, dat.jahr);
-}
-
-void ausgeben_zg(Datum* dat)
-{
-	printf(" %i.%i.%i\n", dat->tag, dat->monat, dat->jahr);
-}
-
-Datum eingeben(void)
-{
-	Datum dat;
-	printf("\n Datum eingeben (DD.MM.JJJJ):");
-	scanf_s("%d.%d.%d", &dat.tag, &dat.monat, &dat.jahr);	// DD.MM.JJJJ wird vorgegeben
-															// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
-
-
-	return dat;
-}
-
-// mit Zeiger
-void eingeben_zg(Datum* dat)
-{
-	printf("\n Datum eingeben (DD.MM.JJJJ):");
-	scanf_s("%d.%d.%d", &dat->tag, &dat->monat, &dat->jahr);	// DD.MM.JJJJ wird vorgegeben
-																// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
-
-																//return (dat);
-}
+//
+//void ausgeben(Datum dat)
+//{
+//	printf("\n %i.%i.%i\n", dat.tag, dat.monat, dat.jahr);
+//}
+//
+//void ausgeben_zg(Datum* dat)
+//{
+//	printf(" %i.%i.%i\n", dat->tag, dat->monat, dat->jahr);
+//}
+//
+//Datum eingeben(void)
+//{
+//	Datum dat;
+//	printf("\n Datum eingeben (DD.MM.JJJJ):");
+//	scanf_s("%d.%d.%d", &dat.tag, &dat.monat, &dat.jahr);	// DD.MM.JJJJ wird vorgegeben
+//															// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
+//
+//
+//	return dat;
+//}
+//
+//// mit Zeiger
+//void eingeben_zg(Datum* dat)
+//{
+//	printf("\n Datum eingeben (DD.MM.JJJJ):");
+//	scanf_s("%d.%d.%d", &dat->tag, &dat->monat, &dat->jahr);	// DD.MM.JJJJ wird vorgegeben
+//																// '.' Punkt muss zwischen Zahlen eingegeben werden	// '%d' Dezimal
+//
+//																//return (dat);
+//}
 
 void per_einlesen(Person * per)
 {

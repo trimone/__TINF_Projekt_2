@@ -24,22 +24,27 @@ using namespace std;
 Kasse::Kasse()
 {
 	anzahl = 0;
+
+	/*for (int i = 0; i < 1000; i++)
+	{
+		
+		einkauf[i] = nullptr;
+		
+	}*/
 }
 
 
 Kasse::~Kasse()
 {
-	if(einkauf != nullptr)
+	
+	for(int i = 0; i < anzahl; i++)
 	{
-		for  (int i = 0; i < anzahl; i++)
-		{
-			delete einkauf[i];
-			einkauf[i] = nullptr;
-			COUT("putput");
-		}
-		anzahl = 0;
-			
+		delete einkauf[i];
+		einkauf[i] = nullptr;
+		COUT("putput");
 	}
+	//anzahl = 0;
+	
 }
 
 void Kasse::gepackteWare()

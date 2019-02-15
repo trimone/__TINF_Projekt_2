@@ -43,7 +43,7 @@ void fib_ausgeben(int fib_vektor[], int laenge);
 
 
 // === HAUPTPROGRAMM ===
-void main(void)  
+void _19_02_12__KA_Uebung_Supermarkt(void)
 {
 	// --- Lokale Variablen ---
 	
@@ -85,6 +85,7 @@ void main(void)
 		}
 				
 	} while (menu != 4);	// Solange die 1 nicht gedrückt wird, wiederholt sich die 'do while'-Schleife
+	_getch();
 }
 
 // === FUNKTIONEN ===

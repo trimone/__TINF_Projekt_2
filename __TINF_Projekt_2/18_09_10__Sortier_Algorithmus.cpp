@@ -52,7 +52,7 @@ PROJEKT:	Sortier Algorithmus
 #define ANZ 100000
 
 // === PROTOTYPEN ===
-int menue();
+int menu();
 void vektor_zufall(double vektor[]);
 void print_vek(double vek[]);
 int sort_bubble(double vek[]);
@@ -69,7 +69,7 @@ int vergleiche(const void* e1, const void* e2);
 
 // === HAUPTPROGRAMM ===
 
-void main(void)
+void _18_09_10__Sortier_Algorithmus(void)
 {
 	// --- Lokale Variablen ---
 	 
@@ -88,7 +88,7 @@ void main(void)
 	
 	do
 	{		
-		eingabe = menue();
+		eingabe = menu();
 
 		switch (eingabe)
 		{
@@ -127,7 +127,7 @@ void main(void)
 // === FUNKTIONEN ===
 
 // === Menü ===
-int menue()
+int menu()
 {
 	
 	int eingabe = 0;

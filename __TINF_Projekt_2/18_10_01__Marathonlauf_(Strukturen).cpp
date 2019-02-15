@@ -13,7 +13,7 @@ PROJEKT:
 
 ======================================================================================================*/
 
-
+#pragma once
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -70,11 +70,11 @@ void zeitausgeben(Zeit* time);
 
 
 //int per_suchen(char nachname[], int anzahl, Person per_vek[]);
-int menue();
+int menu(int i);
 
 
 // === HAUPTPROGRAMM ===
-void main(void)
+void _18_10_01__Marathonlauf_Strukturen(void)
 {
 	// --- Lokale Variablen ---
 	int eingabe;
@@ -89,7 +89,7 @@ void main(void)
 	printf("\n======================================================================\n");
 	do
 	{
-		eingabe = menue();
+		eingabe = menu(1);
 
 		switch (eingabe)
 		{
@@ -143,7 +143,7 @@ void main(void)
 //	return nr;
 //}
 
-int menue()
+int menu(int i)
 {
 	int eingabe = 0;
 	printf("\n\n [1] Teilnehmer eingeben");
