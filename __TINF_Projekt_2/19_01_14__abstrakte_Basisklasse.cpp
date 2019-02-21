@@ -33,8 +33,6 @@ using namespace std;			// damit string als Datentyp erkannt wird
 #define ANZ 3 
 
 // === PROTOTYPEN ===
-void fibonacci(int fib_vektor[]);
-void fib_ausgeben(int fib_vektor[], int laenge);
 
 
 // === HAUPTPROGRAMM ===

@@ -59,7 +59,7 @@
 //
 //	Auto_Agg* brumbrum = new Auto_Agg(23);
 //	Auto_Agg* brumbrum_mit_motor = new Auto_Agg(motor, 42);
-//	Auto_Agg* mercedes = new Auto_Agg(motor, 723);	// Motor ist 2 Fahrzeugen !!!!!
+//	Auto_Agg* mercedes = new Auto_Agg(motor, 723);	// Motor ist in 2 Fahrzeugen !!!!!
 //													// NICHT  ERLAUBT !!!!
 //	brumbrum->anmelden();
 //	brumbrum_mit_motor->anmelden();

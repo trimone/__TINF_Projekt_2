@@ -28,6 +28,9 @@ int print_menu();	// Aufwahlmenü generieren
 void prog_close();
 
 
+#include "19_02_12__KA_Uebung_Supermarkt.cpp"
+
+_my_main ka;
 
 Menu_Class* _menu_obj[100];	// Menüpunkte
 
@@ -49,8 +52,7 @@ void main(void)
 	//void _18_09_24__Strukturen_Aufgabe();
 	_menu("18_09_24__Strukturen_Aufgabe");
 
-
-	void _19_02_12__KA_Uebung_Supermarkt();
+	//void _19_02_12__KA_Uebung_Supermarkt();
 	_menu("19_02_12__KA_Uebung_Supermarkt");
 	
 	
@@ -82,8 +84,8 @@ void main(void)
 			break;
 
 		case 16:
-			
-			_19_02_12__KA_Uebung_Supermarkt();
+			ka.main();
+			//_19_02_12__KA_Uebung_Supermarkt();
 			break;
 
 		default:

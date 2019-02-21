@@ -8,7 +8,7 @@ PROJEKT:	Supermarkt
 
 ======================================================================================================*/
 
-
+#pragma once
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -37,13 +37,15 @@ using namespace std;			// damit string als Datentyp erkannt wird
 #define ZETTEL(name , preis) cout << "\tArtikel: " << name << "\tPreis: " << preis << endl
 
 
+struct _my_main
+{
 // === PROTOTYPEN ===
 void fibonacci(int fib_vektor[]);
 void fib_ausgeben(int fib_vektor[], int laenge);
 
 
 // === HAUPTPROGRAMM ===
-void _19_02_12__KA_Uebung_Supermarkt(void)
+void main(void)
 {
 	// --- Lokale Variablen ---
 	
@@ -87,6 +89,8 @@ void _19_02_12__KA_Uebung_Supermarkt(void)
 	} while (menu != 4);	// Solange die 1 nicht gedrückt wird, wiederholt sich die 'do while'-Schleife
 	_getch();
 }
+
+};
 
 // === FUNKTIONEN ===
 

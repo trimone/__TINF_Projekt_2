@@ -4,6 +4,13 @@
 using namespace std;			// damit string als Datentyp erkannt wird
 #include <iostream>				// für 'cin' & 'cout'
 
+
+class main_main
+{
+protected:
+	virtual void main() {}
+};
+
 //
 //
 //void _18_09_10__Sortier_Algorithmus();
