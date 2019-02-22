@@ -74,7 +74,7 @@ int menu(int i);
 
 
 // === HAUPTPROGRAMM ===
-void _18_10_01__Marathonlauf_Strukturen(void)
+void _18_10_01_Marothon::main(void)
 {
 	// --- Lokale Variablen ---
 	int eingabe;

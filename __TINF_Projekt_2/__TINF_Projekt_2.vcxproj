@@ -115,7 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="18_09_10__Sortier_Algorithmus.cpp" />
+    <ClCompile Include="18_09_10__Sortier_Algorithmus.h" />
     <ClCompile Include="18_09_21__Strukturen.cpp" />
     <ClCompile Include="18_09_24__Strukturen_Aufgabe.cpp" />
     <ClCompile Include="18_10_01__Marathonlauf_(Strukturen).cpp" />
@@ -146,6 +146,7 @@
     <ClInclude Include="Hund.h" />
     <ClInclude Include="Kasse.h" />
     <ClInclude Include="KopierKarte.h" />
+    <ClInclude Include="my_biblio.h" />
     <ClInclude Include="Rechteck.h" />
     <ClInclude Include="Rahmen.h" />
     <ClInclude Include="Structs.h" />

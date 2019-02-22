@@ -27,6 +27,7 @@ using namespace std;			// damit string als Datentyp erkannt wird
 
 #include "my_biblio.h"			// Eigene Bibliothek
 #include "Kasse.h"
+//#include "__all_mains.h"
 
 // === MAKROS ===
 #define xHoch2(x) (x)*(x) // BESSERES Makros !!!
@@ -36,19 +37,25 @@ using namespace std;			// damit string als Datentyp erkannt wird
 
 #define ZETTEL(name , preis) cout << "\tArtikel: " << name << "\tPreis: " << preis << endl
 
+// === STRUCT-KONSTRUKT ===
+//struct _19_02_12_Supermarkt : public _main_struct	// Kapselt die .cpp ab
+//{
+// string get_main_name(){ return "19_02_12__KA_Uebung_Supermarkt"; }
+//
+//// === PROTOTYPEN ===
+//
+ 
 
-struct _my_main
+void  _19_02_12_Supermarkt::hey()
 {
-// === PROTOTYPEN ===
-void fibonacci(int fib_vektor[]);
-void fib_ausgeben(int fib_vektor[], int laenge);
-
+	COUT("sdf ooo");
+}
 
 // === HAUPTPROGRAMM ===
-void main(void)
+ void _19_02_12_Supermarkt::main(void)		
 {
 	// --- Lokale Variablen ---
-	
+	 hey();
 	
 	// --- Programm Einleitung ---
 	cout << endl << "======================================================================" << endl;
@@ -90,7 +97,9 @@ void main(void)
 	_getch();
 }
 
-};
-
 // === FUNKTIONEN ===
+
+
+//}; // === STRUCT ENDE ===
+
 

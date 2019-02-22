@@ -66,9 +66,6 @@
     <ClCompile Include="__MAIN( ).cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="18_09_10__Sortier_Algorithmus.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="18_09_21__Strukturen.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -79,6 +76,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Structs.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="18_09_10__Sortier_Algorithmus.h">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -123,6 +123,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Structs.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="my_biblio.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,12 +4,9 @@
 using namespace std;			// damit string als Datentyp erkannt wird
 #include <iostream>				// für 'cin' & 'cout'
 
-
-class main_main
-{
-protected:
-	virtual void main() {}
-};
+//#include "18_09"
+//#include "19_02_12__KA_Uebung_Supermarkt.cpp"
+//#include "18"
 
 //
 //
