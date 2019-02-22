@@ -70,17 +70,17 @@ struct _19_02_08_Rahmen : _main_struct
 struct _18_10_01_Marothon : _main_struct
 	{
 		// --- .cpp Name wird zurüchgegen ---
-		string get_main_name() { return "VORLAGE"; }	// für Menüsteureung benötigt
+		string get_main_name() { return "18_10_01__Marathonlauf_(Strukturen)"; }	// für Menüsteureung benötigt
 	
 	   // === HAUPTPROGRAMM ===
 		void main(void);
 	};
 //
-//struct VORLAGE : _main_struct
-//{
-//	// --- .cpp Name wird zurüchgegen ---
-//	string get_main_name() { return "VORLAGE"; }	// für Menüsteureung benötigt
-//
-//   // === HAUPTPROGRAMM ===
-//	void main(void);
-//};
+struct VORLAGE : _main_struct
+{
+	// --- .cpp Name wird zurüchgegen ---
+	string get_main_name() { return "VORLAGE"; }	// für Menüsteureung benötigt
+
+   // === HAUPTPROGRAMM ===
+	void main(void);
+};

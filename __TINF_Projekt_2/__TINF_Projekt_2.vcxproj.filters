@@ -78,7 +78,7 @@
     <ClCompile Include="Structs.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="18_09_10__Sortier_Algorithmus.h">
+    <ClCompile Include="18_09_10__Sortier_Algorithmus.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

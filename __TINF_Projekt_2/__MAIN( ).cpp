@@ -65,7 +65,7 @@ void main(void)
 	all_sub_mains[i_main] = new _19_02_08_Rahmen; i_main++;
 	all_sub_mains[i_main] = new _19_02_12_Supermarkt; i_main++;
 	
-	
+	//if(i<)
 	
 
 	//// === Prototypen für auszuführende '.cpp' ===
@@ -95,7 +95,8 @@ void main(void)
 		else select_main = _SET_main;	// Manuelle .cpp Auswahl => aktuelle neue Datei
 
 		/// !!!!!!!!!
-		all_sub_mains[select_main]->main();
+		if (select_main >= 0)
+			all_sub_mains[select_main]->main();
 
 		//// select_main = xx;	// manuelle Auswahl
 		//switch (select_main)
@@ -122,15 +123,15 @@ void main(void)
 		//	break;
 		//}
 		
-	} while (select_main != 0 && toggle_menu);
+	} while (select_main != -1 && toggle_menu);
 
-	for (auto &_main_end : all_sub_mains)
+	//delete[] all_sub_mains;
+	for (_main_struct* &_main_end : all_sub_mains)
 	{
 		if (_main_end == nullptr)
 			break;
 		delete _main_end;
 		_main_end = nullptr;
-
 	}
 	// === Menüpunkte wieder löschen
 	for (int i = 0; i < Menu_Class::get_main_count(); i++)
@@ -152,66 +153,78 @@ void _menu(string main_name)
 }
 
 // === Auswahlmenü ausgebnen ===
-int print_menu()
-{
-	int i;
-	int user_input;
-	int count = Menu_Class::get_main_count();
-	COUT("========================================================================");
-	COUT(endl << "Welche '.cpp' Datei soll ausgefuehrt werden?");
-	COUT("________________________________________________________________________" << endl);
-	for (i = 0; i != count; i++)
-	{
-		COUT("   [" << i + 1 << "]  " << _menu_obj[i]->get_main_name());
-	}
-	COUT(endl << "   [" << i + 1 << "]  Auswahmenue ausschalten!");
-	///TAB; COUT("=> Default .cpp ausfuehren: " << _menu_obj[_SET_main - 1 ]->get_main_name()))
-	COUT("   [0]  [BEENDEN]");
-
-	cout << endl << "AUSWAHL [  ]\b\b\b";
-	cin >> user_input;
-	COUT("________________________________________________________________________" << endl);
-
-	if (user_input == (i + 1))	// Wenn Auswahl ausgeschaltet wird
-	{
-		toggle_menu = false;
-		user_input = _SET_main;			// Defpult .cpp wird ausgeführt => _SET_main 
-		COUT("[Menue ausgeschaltet!]");
-		COUT(" Folgende .cpp wird ausgeführt: " << endl
-			<< "   => " << _menu_obj[0]->get_main_name());	//[user_input-1]
-	}
-	
-	//COUT("========================================================================");
-
-	return user_input - 1;
-}
+//int print_menu()
+//{
+//	int i;
+//	int user_input;
+//	int count = Menu_Class::get_main_count();
+//	COUT("========================================================================");
+//	COUT(endl << "Welche '.cpp' Datei soll ausgefuehrt werden?");
+//	COUT("________________________________________________________________________" << endl);
+//	for (i = 0; i != count; i++)
+//	{
+//		COUT("   [" << i + 1 << "]  " << _menu_obj[i]->get_main_name());
+//	}
+//	COUT(endl << "   [" << i + 1 << "]  Auswahmenue ausschalten!");
+//	///TAB; COUT("=> Default .cpp ausfuehren: " << _menu_obj[_SET_main - 1 ]->get_main_name()))
+//	COUT("   [0]  [BEENDEN]");
+//
+//	cout << endl << "AUSWAHL [  ]\b\b\b";
+//	cin >> user_input;
+//	COUT("________________________________________________________________________" << endl);
+//
+//	if (user_input == (i + 1))	// Wenn Auswahl ausgeschaltet wird
+//	{
+//		toggle_menu = false;
+//		user_input = _SET_main;			// Defpult .cpp wird ausgeführt => _SET_main 
+//		COUT("[Menue ausgeschaltet!]");
+//		COUT(" Folgende .cpp wird ausgeführt: " << endl
+//			<< "   => " << _menu_obj[0]->get_main_name());	//[user_input-1]
+//	}
+//	
+//	//COUT("========================================================================");
+//
+//	return user_input - 1;
+//}
 
 // === Auswahlmenü ausgebnen ===
 int print_menu(_main_struct* all_sub_mains[])
 {
 	int i, user_input;
 
-	COUT("========================================================================");
-	COUT(endl << "Welche '.cpp' Datei soll ausgefuehrt werden?");
-	COUT("________________________________________________________________________" << endl);
-	
-	for (i = 0; all_sub_mains[i] != nullptr; i++)
+	do
 	{
-		COUT("   [" << i + 1 << "]  " << all_sub_mains[i]->get_main_name());
-	}
-	/*for (_main_struct* sub_main : all_sub_mains)
-	{
-		if (sub_main == nullptr)
-			break;
-		COUT("   [" << i + 1 << "]  " << sub_main->get_main_name());
-	}*/
-	
-	COUT(endl << "   [" << i + 1 << "]  Auswahlmenue ausschalten!");
-	///TAB; COUT("=> Default .cpp ausfuehren: " << _menu_obj[_SET_main - 1 ]->get_main_name()))
-	COUT("   [0]  [BEENDEN]");
+		COUT("========================================================================");
+		COUT(endl << "Welche '.cpp' Datei soll ausgefuehrt werden?");
+		COUT("________________________________________________________________________" << endl);
 
-	cout << endl << "AUSWAHL [  ]\b\b\b";
-	cin >> user_input;
+		for (i = 0; all_sub_mains[i] != nullptr; i++)
+		{
+			COUT("   [" << i + 1 << "]  " << all_sub_mains[i]->get_main_name());
+		}
+		/*for (_main_struct* sub_main : all_sub_mains)
+		{
+			if (sub_main == nullptr)
+				break;
+			COUT("   [" << i + 1 << "]  " << sub_main->get_main_name());
+		}*/
+
+		COUT(endl << "   [" << i + 1 << "]  Auswahlmenue ausschalten!");
+		///TAB; COUT("=> Default .cpp ausfuehren: " << _menu_obj[_SET_main - 1 ]->get_main_name()))
+		COUT("   [0]  [BEENDEN]");
+
+		cout << endl << "AUSWAHL [  ]\b\b\b";
+		cin >> user_input;
+
+		if (!(user_input <= i + 1))
+		{
+			COUT("Unguehltige Eingabe!");
+			//cin.get();
+			cin.ignore();	// ;(
+			cin.get();		// auf 'enter' warten
+		}
+	} while (!(user_input <= i + 1));	// solange 
+
 	COUT("________________________________________________________________________" << endl);
 
 	if (user_input == (i + 1))	// Wenn Auswahl ausgeschaltet wird
@@ -225,7 +238,7 @@ int print_menu(_main_struct* all_sub_mains[])
 
 	//COUT("========================================================================");
 
-	return user_input - 1;
+	return user_input - 1; // wegen index
 }
 
 

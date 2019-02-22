@@ -25,6 +25,7 @@ using namespace std;			// damit string als Datentyp erkannt wird
 
 
 #include "my_biblio.h"			// Eigene Bibliothek
+#include "__all_mains.h"
 
 // === MAKROS ===
 #define xHoch2(x) (x)*(x) // BESSERES Makros !!!
@@ -35,27 +36,16 @@ using namespace std;			// damit string als Datentyp erkannt wird
 
 // === STRUCT-KONSTRUKT ===	// für Menüsteureung benötigt
 // zur Ausführung Instanz in '_MAIN().cpp' erzeugen !!
-
-struct VORLAGE : public _main_struct	// Kapselt die .cpp ab
-{
-	// --- .cpp Name wird zurüchgegen ---
-	string get_main_name() { return "VORLAGE"; }	// für Menüsteureung benötigt
+// Kapselt die .cpp ab
 
 // === PROTOTYPEN ===
-	void fibonacci(int fib_vektor[]);
-	void fib_ausgeben(int fib_vektor[], int laenge);
-
+// ==> im Struct Header
 
 // === SUB MAIN ===
-	void main(void)
+	void VORLAGE::main(void)
 	{
 		// --- Lokale Variablen ---
-		struct Datum		// neuen Datentyp anlegen
-		{
-			int tag;		// 
-			int monat;
-			int jahr;
-		};				// ';' sehr wichtig !!!
+		
 
 		// --- Programm Einleitung ---
 		cout << endl << "======================================================================" << endl;
@@ -78,4 +68,4 @@ struct VORLAGE : public _main_struct	// Kapselt die .cpp ab
 	// === FUNKTIONEN ===
 
 
-}; // === STRUCT ENDE ===
+// === STRUCT DEFINITION ENDE ===
