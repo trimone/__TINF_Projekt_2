@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Quelldateien\Klassen cpp">
+      <UniqueIdentifier>{96e38bc7-9133-4b8e-81a3-bb28ffdc9a96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="my_biblio.cpp">
@@ -45,9 +48,6 @@
     <ClCompile Include="KopierKarte.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Auto_Agg.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Rahmen.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -72,13 +72,25 @@
     <ClCompile Include="18_09_24__Strukturen_Aufgabe.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="18_10_01__Marathonlauf_(Strukturen).cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Structs.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="18_09_10__Sortier_Algorithmus.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="18_10_01__Marathonlauf_(Strukturen).cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto_Agg.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="19_02_22__KA2_Vererbung_Komposition.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="KA_Recheck.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="19_02_22__Assoziation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -126,6 +138,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="my_biblio.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="KA_Rechteck.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

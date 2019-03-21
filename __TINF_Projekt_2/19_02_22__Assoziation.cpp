@@ -1,9 +1,9 @@
 /*======================================================================================================
-TINF				
+TINF
 
-NAME: ALEX HUBER	KLASSE: FTED2	DATUM:	
+NAME: ALEX HUBER	KLASSE: FTED2	DATUM:
 
-PROJEKT:	
+PROJEKT:
 
 ======================================================================================================*/
 
@@ -27,6 +27,8 @@ using namespace std;			// damit string als Datentyp erkannt wird
 #include "my_biblio.h"			// Eigene Bibliothek
 #include "__all_mains.h"
 
+#include "Auto_Agg.h"
+
 // === MAKROS ===
 #define xHoch2(x) (x)*(x) // BESSERES Makros !!!
 #define TAB	cout << "\t"
@@ -37,35 +39,35 @@ using namespace std;			// damit string als Datentyp erkannt wird
 // === STRUCT-KONSTRUKT ===	// für Menüsteureung benötigt
 // zur Ausführung Instanz in '_MAIN().cpp' erzeugen !!
 // Kapselt die .cpp ab
-
+string _19_02_22_Assoziation::get_main_name() { return "19_02_22_Assoziation"; }
 // === PROTOTYPEN ===
 // ==> im Struct Header
 
 // === SUB MAIN ===
-	void VORLAGE::main(void)
+void _19_02_22_Assoziation::main(void)
+{
+	// --- Lokale Variablen ---
+
+
+	// --- Programm Einleitung ---
+	cout << endl << "======================================================================" << endl;
+	cout << endl << " " << endl;
+	cout << endl << "======================================================================" << endl;
+	// 'endl' = 'end line' = '\n'
+
+	do
 	{
-		// --- Lokale Variablen ---
-		
+		// === AUFGABE 1 ===
 
-		// --- Programm Einleitung ---
-		cout << endl << "======================================================================" << endl;
 		cout << endl << " " << endl;
-		cout << endl << "======================================================================" << endl;
-		// 'endl' = 'end line' = '\n'
-
-		do
-		{
-			// === AUFGABE 1 ===
-
-			cout << endl << " " << endl;
 
 
 
 
-		} while (main_beenden() != 1);	// Solange die 1 nicht gedrückt wird, wiederholt sich die 'do while'-Schleife
-	}
+	} while (main_beenden() != 1);	// Solange die 1 nicht gedrückt wird, wiederholt sich die 'do while'-Schleife
+}
 
-	// === FUNKTIONEN ===
+// === FUNKTIONEN ===
 
 
 // === STRUCT ENDE ===

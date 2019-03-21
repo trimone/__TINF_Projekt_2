@@ -24,7 +24,7 @@ int main_beenden()
 	int end;
 
 	printf("\n\n\n******************************************");
-	printf("\n Soll das Programm beenden werden?\n   [ 1.] BEENDEN\n   [ 2.] Nicht beenden\n   ");	// Buchstaben dürfen nicht gedrückt werden!
+	printf("\n Soll das Sub Programm beenden werden?\n   [1] BEENDEN\n   [2] Nicht beenden\n   ");	// Buchstaben dürfen nicht gedrückt werden!
 	fflush(stdin);
 	scanf_s("%i", &end);
 

@@ -104,6 +104,11 @@ void Auto_Agg::motorEinbauen(Motor * mot)
 	}
 }
 
+void Auto_Agg::fahren(void)
+{
+	COUT("Auto mit Nr. " << nr << " faehrt");
+}
+
 Fahrzeugbrief::Fahrzeugbrief()
 {
 	// hier werden keine Attribute gesetzt
@@ -171,4 +176,19 @@ bool Motor::getEingebaut()
 void Motor::setEingebaut(bool e)
 {
 	_eingebau = e;
+}
+
+Fahrer::Fahrer(string * name)
+{
+	this->name = &name;
+}
+
+void Fahrer::fahren(Auto_Agg * meinAuto)
+{
+	COUT("Fahrer " << getName() << "faehrt");
+}
+
+string * Fahrer::getName(void)
+{
+	return &name;
 }

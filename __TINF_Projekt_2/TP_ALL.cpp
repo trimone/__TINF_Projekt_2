@@ -304,7 +304,8 @@ int main(void)
 	// nun darf WDCE <nicht> gesetzt werden!
 	WDTCSR = (0 << WDE) | (1 << WDIE) | (0 << WDP3) | (1 << WDP2) | (1 << WDP1) | (0 << WDP0); // watchdog interrupt enable => UART Timeout, Prescaler 0110b (ca. 1sec)
 	/*	Bit 6 – WDIE: Watchdog Interrupt Enable
-		Bits 2:0 – WDP[2:0]: Watchdog Timer Prescaler 2, 1, and 0 => 1s
+		Bits 2:0 – WDP[2:0]: Watchdog Timer Prescaler 2, 1, and 0 => 1s
+
 	// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 	// power reduction

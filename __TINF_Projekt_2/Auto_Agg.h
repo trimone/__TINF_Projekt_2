@@ -1,7 +1,11 @@
 #pragma once
 
+#include <string>
+
 /// !!!
 // Automatisch erzeugte Komponenten Objekte müssen vor der zusammengesetzten Klasse definiert  werden !!
+
+
 
 class Fahrzeugbrief
 {
@@ -72,8 +76,23 @@ public:
 
 	void motorAusbauen();
 	void motorEinbauen(Motor* mot);	
+
+	void fahren(void);
 };
 
+
+class Fahrer
+{
+private:
+	string name;
+public:
+	Fahrer(string* name);
+	//~Fahrer();
+
+	void fahren(Auto_Agg* meinAuto);
+	string* getName(void);
+
+};
 
 
 

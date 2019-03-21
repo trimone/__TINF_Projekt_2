@@ -61,7 +61,7 @@ struct _19_02_12_Supermarkt : public _main_struct
 struct _19_02_08_Rahmen : _main_struct
 {
 	// --- .cpp Name wird zurüchgegen ---
-	string get_main_name() { return "19_02_08_Komposition_Rahmen"; }	// für Menüsteureung benötigt
+	string get_main_name(void) { return "19_02_08_Komposition_Rahmen"; }	// für Menüsteureung benötigt
 
    // === HAUPTPROGRAMM ===
 	void main(void);
@@ -75,6 +75,25 @@ struct _18_10_01_Marothon : _main_struct
 	   // === HAUPTPROGRAMM ===
 		void main(void);
 	};
+
+struct _19_02_22__KA2 : _main_struct
+{
+	// --- .cpp Name wird zurüchgegen ---
+	string get_main_name(void); // { return "19_02_22__KA2_Vererbung_Komposition"; }	// für Menüsteureung benötigt
+
+   // === HAUPTPROGRAMM ===
+	void main(void);
+};
+
+struct _19_02_22_Assoziation : _main_struct
+{
+	// --- .cpp Name wird zurüchgegen ---
+	string get_main_name();// { return "19_02_22_Assoziation"; }	// für Menüsteureung benötigt
+
+   // === HAUPTPROGRAMM ===
+	void main(void);
+};
+
 //
 struct VORLAGE : _main_struct
 {
