@@ -1,10 +1,13 @@
 #pragma once
 
+#include <iostream>
 #include <string>
+using namespace std;
 
 /// !!!
 // Automatisch erzeugte Komponenten Objekte müssen vor der zusammengesetzten Klasse definiert  werden !!
 
+class Fahrer;
 
 
 class Fahrzeugbrief
@@ -65,6 +68,8 @@ private:
 							// doppeltes anmelden vermeiden
 	// Aggregatation
 	Motor* mot;
+
+	Fahrer* meinFahrer;	// Assoziation
 public:
 	Auto_Agg(int nr);
 	Auto_Agg(Motor* mot, int nr);	// Aggregation: dem Konstruktor wird ein Objekt aus 'main()' übergeben
@@ -75,9 +80,12 @@ public:
 	void abmelden();
 
 	void motorAusbauen();
-	void motorEinbauen(Motor* mot);	
+	void motorEinbauen(Motor* mot);
 
+	// Assoziation
+	void bemannen(Fahrer* meinFahrer);	// stellt Assoziation her
 	void fahren(void);
+	void verlassen(void);	// Assoziation lösen
 };
 
 
@@ -85,12 +93,15 @@ class Fahrer
 {
 private:
 	string name;
+	Auto_Agg* meinAuto;	// ungerichtet Assoziation. Bindung hält länger als nur eine Methode
 public:
-	Fahrer(string* name);
+	Fahrer(string name);
+	//Fahrer(const char* str);
 	//~Fahrer();
 
-	void fahren(Auto_Agg* meinAuto);
-	string* getName(void);
+	void fahren(Auto_Agg* meinAuto);	// stellt Assoziation her
+	void aussteigen(void);	// Assoziation lösen
+	string getName(void);
 
 };
 

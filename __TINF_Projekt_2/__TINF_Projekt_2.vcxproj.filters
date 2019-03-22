@@ -18,37 +18,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="my_biblio.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Datum.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Rechteck.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="__Vorlage_CPP_Methoden.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="__Vorlage.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Widerstand.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Hund.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="HausTier.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Fahrzeug.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="KopierKarte.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Rahmen.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="19_02_08__Komposition_Rahmen.cpp">
@@ -60,9 +33,6 @@
     <ClCompile Include="19_02_12__KA_Uebung_Supermarkt.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Kasse.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="__MAIN( ).cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -70,9 +40,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="18_09_24__Strukturen_Aufgabe.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Structs.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="18_09_10__Sortier_Algorithmus.cpp">
@@ -87,11 +54,50 @@
     <ClCompile Include="19_02_22__KA2_Vererbung_Komposition.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="KA_Recheck.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="19_02_22__Assoziation.cpp">
       <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="19_03_15__Pruefungsaufgabe_Sommer_2014.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Widerstand.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Fahrzeug.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="HausTier.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Hund.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="KA_Recheck.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Kasse.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="KopierKarte.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="my_biblio.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Rahmen.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Rechteck.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Structs.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Datum.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Email.cpp">
+      <Filter>Quelldateien\Klassen cpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +147,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="KA_Rechteck.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Email.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

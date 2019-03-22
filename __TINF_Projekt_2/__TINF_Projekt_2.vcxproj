@@ -124,11 +124,13 @@
     <ClCompile Include="19_02_12__KA_Uebung_Supermarkt.cpp" />
     <ClCompile Include="19_02_22__Assoziation.cpp" />
     <ClCompile Include="19_02_22__KA2_Vererbung_Komposition.cpp" />
+    <ClCompile Include="19_03_15__Pruefungsaufgabe_Sommer_2014.cpp" />
     <ClCompile Include="Auto_Agg.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
     <ClCompile Include="HausTier.cpp" />
     <ClCompile Include="Hund.cpp" />
+    <ClCompile Include="Email.cpp" />
     <ClCompile Include="Kasse.cpp" />
     <ClCompile Include="KA_Recheck.cpp" />
     <ClCompile Include="KopierKarte.cpp" />
@@ -147,6 +149,7 @@
     <ClInclude Include="Fahrzeug.h" />
     <ClInclude Include="HausTier.h" />
     <ClInclude Include="Hund.h" />
+    <ClInclude Include="Email.h" />
     <ClInclude Include="Kasse.h" />
     <ClInclude Include="KA_Rechteck.h" />
     <ClInclude Include="KopierKarte.h" />

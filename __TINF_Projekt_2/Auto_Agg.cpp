@@ -39,6 +39,9 @@ Auto_Agg::Auto_Agg(int nr)
 
 Auto_Agg::Auto_Agg(Motor * mot, int nr)
 {
+	this->mot = nullptr;
+	schein = nullptr;	// es gibt keinen Fahrzeugschein
+	meinFahrer = nullptr;
 	if (nr >= 0)
 	{
 		this->nr = nr;
@@ -49,8 +52,6 @@ Auto_Agg::Auto_Agg(Motor * mot, int nr)
 
 		motorEinbauen(mot);
 	}
-	schein = nullptr;	// es gibt keinen Fahrzeugschein
-
 }
 
 Auto_Agg::~Auto_Agg()
@@ -104,9 +105,22 @@ void Auto_Agg::motorEinbauen(Motor * mot)
 	}
 }
 
+void Auto_Agg::bemannen(Fahrer* meinFahrer)
+{
+	this->meinFahrer = meinFahrer;
+}
+
 void Auto_Agg::fahren(void)
 {
-	COUT("Auto mit Nr. " << nr << " faehrt");
+	COUT("Fahrer " << meinFahrer->getName() 
+		<<" faehrt Auto mit Nr. " << nr 
+		<< " mit " << mot->getPS() << " PS");
+	COUT("_____________________________________");
+}
+
+void Auto_Agg::verlassen()
+{
+	meinFahrer = nullptr;
 }
 
 Fahrzeugbrief::Fahrzeugbrief()
@@ -150,9 +164,11 @@ int Fahrzeugschein::getNr()
 
 Motor::Motor(int ps)
 {
+	setEingebaut(false);
 	if (ps > 0)
 	{
 		this->ps = ps;
+
 
 	}
 	COUT("Motor erstellt");
@@ -165,7 +181,7 @@ Motor::~Motor()
 
 int Motor::getPS()
 {
-	return this->ps;
+	return ps;
 }
 
 bool Motor::getEingebaut()
@@ -178,17 +194,32 @@ void Motor::setEingebaut(bool e)
 	_eingebau = e;
 }
 
-Fahrer::Fahrer(string * name)
+Fahrer::Fahrer(string name)
 {
-	this->name = &name;
+	this->name = name;
+	this->meinAuto = nullptr;
 }
 
 void Fahrer::fahren(Auto_Agg * meinAuto)
 {
-	COUT("Fahrer " << getName() << "faehrt");
+	if( this->meinAuto == nullptr)
+	{ 
+		COUT("Fahrer " << getName() << " faehrt mit Auto " );
+		this->meinAuto = meinAuto;	// länger Bildung
+		meinAuto->bemannen(this);	// Objekt übergibt einen Zeiger auf sich selbst
+		meinAuto->fahren();
+	}
+	else COUT("Fahrer faehrt schon ein Auto");
 }
 
-string * Fahrer::getName(void)
+void Fahrer::aussteigen()
 {
-	return &name;
+	COUT("Fahrer verlaest das Auto ");
+	meinAuto->verlassen();	// Assoziation beim 'Auto' lösen
+	meinAuto = nullptr;
+}
+
+string Fahrer::getName(void)
+{
+	return name;
 }

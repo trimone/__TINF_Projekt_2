@@ -34,7 +34,7 @@ using namespace std;			// damit string als Datentyp erkannt wird
 #define ANZ 45 
 
 
-// === STRUCT-KONSTRUKT ===	// für Menüsteureung benötigt
+// === STRUCT-KONSTRUKT ===	// für Menüsteuerung benötigt
 // zur Ausführung Instanz in '_MAIN().cpp' erzeugen !!
 // Kapselt die .cpp ab
 

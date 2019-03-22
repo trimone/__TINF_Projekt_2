@@ -1,32 +1,22 @@
 /*======================================================================================================
 TINF
 
-NAME: ALEX HUBER	KLASSE: FTED2	DATUM:
+NAME: ALEX HUBER	KLASSE: FTED2	DATUM:	15.03.2019
 
-PROJEKT:
+PROJEKT:	Assoziation
 
 ======================================================================================================*/
 
 #pragma once
-#include <stdio.h>
-#include <conio.h>
-#include <stdlib.h>
-#include <time.h>
 #define _USE_MATH_DEFINES		// Reihenfolge des #define und #include wichtig, 
-#include <math.h>				//sonst ist M_PI als "nichtdeklarierter Bezeichner" ausgewiesen!
-#include <string.h>				// für String Funktionen
 
 #include <string>				// für string als Datentyp
+#include <conio.h>
 using namespace std;			// damit string als Datentyp erkannt wird
 #include <iostream>				// für 'cin' & 'cout'
 
-#include <ctype.h>
-#include <windows.h>			// Sleep
-
 
 #include "my_biblio.h"			// Eigene Bibliothek
-#include "__all_mains.h"
-
 #include "Auto_Agg.h"
 
 // === MAKROS ===
@@ -51,20 +41,38 @@ void _19_02_22_Assoziation::main(void)
 
 	// --- Programm Einleitung ---
 	cout << endl << "======================================================================" << endl;
-	cout << endl << " " << endl;
+	cout << endl << " ASSOZIATION" << endl;
 	cout << endl << "======================================================================" << endl;
 	// 'endl' = 'end line' = '\n'
+	string name;
+	name = "Dude";
+	Fahrer fahrer(name);
+	Motor* brumbrum = new Motor(232);
+	Motor* motor2 = new Motor(120);
+
+	Auto_Agg* automobil = new Auto_Agg(brumbrum, 1);
+	Auto_Agg* autombil_2 = new Auto_Agg(motor2, 2);
+
 
 	do
 	{
-		// === AUFGABE 1 ===
+		fahrer.fahren(automobil);
+		//fahrer.aussteigen();
 
-		cout << endl << " " << endl;
+		//system("wait");
+		_getch();
+		fahrer.fahren(autombil_2);
+		//fahrer.aussteigen();
 
 
 
 
 	} while (main_beenden() != 1);	// Solange die 1 nicht gedrückt wird, wiederholt sich die 'do while'-Schleife
+
+	delete automobil;
+	automobil = nullptr;
+	delete brumbrum;
+	brumbrum = nullptr;
 }
 
 // === FUNKTIONEN ===
