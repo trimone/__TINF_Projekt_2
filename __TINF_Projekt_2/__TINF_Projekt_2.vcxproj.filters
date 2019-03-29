@@ -99,6 +99,12 @@
     <ClCompile Include="Email.cpp">
       <Filter>Quelldateien\Klassen cpp</Filter>
     </ClCompile>
+    <ClCompile Include="19_03_28__Bauernhof(KA Uebung).cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Bauernhof.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datum.h">
@@ -150,6 +156,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Email.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Bauernhof.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

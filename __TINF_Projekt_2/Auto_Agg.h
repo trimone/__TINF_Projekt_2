@@ -60,20 +60,21 @@ private:
 	// Komposition
 	Fahrzeugbrief brief;	// muss vorher definiert werden!
 	// Komponente wird automatisch erzeugt, wenn Objekt der zusammengesetzten Klasse (Auto) erzeugt wird.
-	// Konstruktoren mit Parametern der Komponeten Klasse können nicht genutzt werden
+	// Konstruktoren mit Parametern der Komponenten Klasse können nicht genutzt werden
 	// im Konstruktor
 	Fahrzeugschein* schein;	// dynamisch Komponenten werden in der zusammengesetzten Klasse erzeugt 
-							// wird nicht autoatisch erzeugt, erst beim 'anmelden()'
-							// muss im ~Destruktror wieder löschen
+							// wird nicht automatisch erzeugt, erst beim 'anmelden()'
+							// muss im ~Destruktor wieder löschen
 							// doppeltes anmelden vermeiden
-	// Aggregatation
+	// Aggregation
 	Motor* mot;
 
-	Fahrer* meinFahrer;	// Assoziation
+	// Assoziation
+	Fahrer* meinFahrer;	
 public:
 	Auto_Agg(int nr);
 	Auto_Agg(Motor* mot, int nr);	// Aggregation: dem Konstruktor wird ein Objekt aus 'main()' übergeben
-									// Objekt 'Auto' hat zugrief auf 'Motor'
+									// Objekt 'Auto' hat Zugriff auf 'Motor'
 	~Auto_Agg();
 
 	void anmelden();

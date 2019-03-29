@@ -16,8 +16,8 @@ using namespace std;
 #define COUT(x) cout << x << endl
 
 
-// === DEFIDITION DER METHODEN ===
-// Zwegs der übersichtilichkeit werden die Methoden ausgelagert
+// === DEFINITION DER METHODEN ===
+// Zwegs der Übersichtlichkeit werden die Methoden ausgelagert
 // 'Class::' ==> Methode gehört zu Klasse
 
 
@@ -29,7 +29,7 @@ Auto_Agg::Auto_Agg(int nr)
 		COUT("Auto erzeugt Nr: " << this->nr);
 
 		// Hier im Konstruktor Attribute für die Komponente setzen 
-		brief.setNr(this->nr);
+		brief.setNr(this->nr);	// Brief wurde automatisch erstellt
 	}
 	schein = nullptr;	// es gibt keinen Fahrzeugschein
 	angemeldet = false;	// ...dann nicht notwendig
@@ -78,12 +78,11 @@ void Auto_Agg::anmelden()
 
 void Auto_Agg::abmelden()
 {
-	if (schein != nullptr)	// nur wenn angemeldet => aber, leere Zeiger können belibig oft gelöscht werden
+	if (schein != nullptr)	// nur wenn angemeldet => aber, leere Zeiger können beliebig oft gelöscht werden
 	{
 		delete schein;
 		schein = nullptr;
 		angemeldet = false;
-
 		COUT("Fahrzeug abgemeldet");
 	}
 }
@@ -205,7 +204,7 @@ void Fahrer::fahren(Auto_Agg * meinAuto)
 	if( this->meinAuto == nullptr)
 	{ 
 		COUT("Fahrer " << getName() << " faehrt mit Auto " );
-		this->meinAuto = meinAuto;	// länger Bildung
+		this->meinAuto = meinAuto;	// längere Bildung
 		meinAuto->bemannen(this);	// Objekt übergibt einen Zeiger auf sich selbst
 		meinAuto->fahren();
 	}

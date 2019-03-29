@@ -125,7 +125,9 @@
     <ClCompile Include="19_02_22__Assoziation.cpp" />
     <ClCompile Include="19_02_22__KA2_Vererbung_Komposition.cpp" />
     <ClCompile Include="19_03_15__Pruefungsaufgabe_Sommer_2014.cpp" />
+    <ClCompile Include="19_03_28__Bauernhof(KA Uebung).cpp" />
     <ClCompile Include="Auto_Agg.cpp" />
+    <ClCompile Include="Bauernhof.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
     <ClCompile Include="HausTier.cpp" />
@@ -145,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Auto_Agg.h" />
+    <ClInclude Include="Bauernhof.h" />
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Fahrzeug.h" />
     <ClInclude Include="HausTier.h" />

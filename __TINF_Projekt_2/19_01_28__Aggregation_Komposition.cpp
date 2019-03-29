@@ -65,7 +65,7 @@
 //	brumbrum_mit_motor->anmelden();
 //	
 //	_getch();
-//	brumbrum->anmelden();	// doppeltes anmelben nicht möglich
+//	brumbrum->anmelden();	// doppeltes anmelden nicht möglich
 //	COUT("__________________________");
 //	brumbrum_mit_motor->motorAusbauen();
 //
