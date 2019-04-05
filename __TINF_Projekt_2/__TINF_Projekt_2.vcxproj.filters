@@ -105,6 +105,12 @@
     <ClCompile Include="Bauernhof.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="19_04_05__Fahrzeugentwicklung_Pruefung_2015.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fahrzeugentwicklung.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datum.h">
@@ -159,6 +165,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Bauernhof.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fahrzeugentwicklung.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

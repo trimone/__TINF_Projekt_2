@@ -112,6 +112,16 @@ struct _19_03_28_Bauernhof : _main_struct
    // === HAUPTPROGRAMM ===
 	void main(void);
 };
+
+struct _19_04_05_Fahrzeugentwicklung : _main_struct
+{
+	// --- .cpp Name wird zurückgegeben ---
+	string get_main_name() { return "19_04_05__Fahrzeugentwicklung_Pruefung_2015"; }	// für Menüsteuerung benötigt
+
+   // === HAUPTPROGRAMM ===
+	void main(void);
+};
+
 //
 struct VORLAGE : _main_struct
 {

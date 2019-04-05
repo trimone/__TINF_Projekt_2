@@ -10,7 +10,7 @@
 //dadurch werden Dateien nur einmal eingefügt,
 //falls doppelte includes vorhanden sind, nicht genormt*/
 //
-///* // falls Compiler '#pragma once' nicht kennt, werden doppelte Include-Dateien wie folgt rausgefiltert
+///* // falls Compiler '#pragma once' nicht kennt, werden doppelte Include-Dateien wie folgt raus gefiltert
 ///*
 //#ifndef CLASSDATUM
 //#define CLASSDATUM

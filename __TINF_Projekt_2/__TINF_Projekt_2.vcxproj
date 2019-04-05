@@ -126,10 +126,12 @@
     <ClCompile Include="19_02_22__KA2_Vererbung_Komposition.cpp" />
     <ClCompile Include="19_03_15__Pruefungsaufgabe_Sommer_2014.cpp" />
     <ClCompile Include="19_03_28__Bauernhof(KA Uebung).cpp" />
+    <ClCompile Include="19_04_05__Fahrzeugentwicklung_Pruefung_2015.cpp" />
     <ClCompile Include="Auto_Agg.cpp" />
     <ClCompile Include="Bauernhof.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Fahrzeug.cpp" />
+    <ClCompile Include="Fahrzeugentwicklung.cpp" />
     <ClCompile Include="HausTier.cpp" />
     <ClCompile Include="Hund.cpp" />
     <ClCompile Include="Email.cpp" />
@@ -150,6 +152,7 @@
     <ClInclude Include="Bauernhof.h" />
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Fahrzeug.h" />
+    <ClInclude Include="Fahrzeugentwicklung.h" />
     <ClInclude Include="HausTier.h" />
     <ClInclude Include="Hund.h" />
     <ClInclude Include="Email.h" />
